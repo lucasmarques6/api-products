@@ -27,5 +27,3 @@ Diseñada siguiendo buenas prácticas de arquitectura y estándares HTTP.
 
 ---
 
-  "price": 25000
-}
