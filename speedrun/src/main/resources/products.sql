@@ -1,22 +1,9 @@
-
-
 -- ============================================
--- INSERCIÓN DE CATEGORÍAS (5 categorías)
--- ============================================
-
-INSERT INTO categories (name) VALUES
-('Tecnología'),
-('Hogar'),
-('Ropa'),
-('Deportes'),
-('Libros');
-
--- ============================================
--- INSERCIÓN DE PRODUCTOS (5 por categoría)
+-- INSERCIÓN DE PRODUCTOS POR CATEGORÍA
 -- ============================================
 
 -- TECNOLOGÍA
-INSERT INTO products (nombre, description, price, category, stock) VALUES
+INSERT INTO product (name, description, price, category, stock) VALUES
 ('Notebook Lenovo', 'Notebook 15 pulgadas, 8GB RAM', 850000, 'Tecnología', 15),
 ('Smartphone Samsung A34', 'Pantalla AMOLED, 128GB', 320000, 'Tecnología', 25),
 ('Auriculares Sony WH-CH520', 'Bluetooth con micrófono', 65000, 'Tecnología', 40),
@@ -24,7 +11,7 @@ INSERT INTO products (nombre, description, price, category, stock) VALUES
 ('Monitor LG 24"', 'Full HD IPS', 120000, 'Tecnología', 20);
 
 -- HOGAR
-INSERT INTO products (nombre, description, price, category, stock) VALUES
+INSERT INTO product (name, description, price, category, stock) VALUES
 ('Lámpara LED', 'Lámpara blanca de escritorio', 12000, 'Hogar', 50),
 ('Silla ergonómica', 'Silla para oficina', 95000, 'Hogar', 10),
 ('Tostadora Philips', 'Tostadora 2 ranuras', 38000, 'Hogar', 18),
@@ -32,7 +19,7 @@ INSERT INTO products (nombre, description, price, category, stock) VALUES
 ('Ventilador Liliana', 'Ventilador de pie 20"', 68000, 'Hogar', 22);
 
 -- ROPA
-INSERT INTO products (nombre, description, price, category, stock) VALUES
+INSERT INTO product (name, description, price, category, stock) VALUES
 ('Remera básica', 'Remera algodón talle M', 8000, 'Ropa', 100),
 ('Pantalón jean', 'Jean azul clásico', 25000, 'Ropa', 50),
 ('Campera deportiva', 'Campera liviana', 35000, 'Ropa', 30),
@@ -40,7 +27,7 @@ INSERT INTO products (nombre, description, price, category, stock) VALUES
 ('Buzo con capucha', 'Buzo polar', 30000, 'Ropa', 25);
 
 -- DEPORTES
-INSERT INTO products (nombre, description, price, category, stock) VALUES
+INSERT INTO product (name, description, price, category, stock) VALUES
 ('Pelota de fútbol', 'Pelota tamaño 5', 15000, 'Deportes', 40),
 ('Mancuernas 5kg', 'Set de 2 mancuernas', 22000, 'Deportes', 30),
 ('Bicicleta MTB', 'Mountain bike rodado 29', 350000, 'Deportes', 8),
@@ -48,9 +35,11 @@ INSERT INTO products (nombre, description, price, category, stock) VALUES
 ('Raqueta de tenis', 'Raqueta aluminio', 38000, 'Deportes', 20);
 
 -- LIBROS
-INSERT INTO products (nombre, description, price, category, stock) VALUES
+INSERT INTO product (name, description, price, category, stock) VALUES
 ('El Principito', 'Edición bolsillo', 5500, 'Libros', 100),
 ('Clean Code', 'Robert C. Martin', 35000, 'Libros', 25),
 ('Harry Potter 1', 'Edición tapa dura', 22000, 'Libros', 40),
 ('SQL para principiantes', 'Guía de aprendizaje', 18000, 'Libros', 30),
 ('Crónica de una muerte anunciada', 'Gabriel García Márquez', 9000, 'Libros', 60);
+
+

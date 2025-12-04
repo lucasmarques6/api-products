@@ -2,26 +2,26 @@ spring:
   application:
     name: speedrun
 
-server:
-  port: 8081
-
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:ecommerce
     username: sa
     password:
 
-sql:
-  init:
-    mode: always
-    data-locations: classpath:products.sql
+  jpa:
+    hibernate:
+      ddl-auto: create   # esta opción permite que el SQL se ejecute antes
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:products.sql
 
   h2:
     console:
-      enabled: true     # Habilita la consola web
-      path: /h2-console # URL: http://localhost:8080/h2-console
+      enabled: true
+      path: /h2-console
 
-jpa:
-  defer-datasource-initialization: ture
-
-
+server:
+  port: 8081
