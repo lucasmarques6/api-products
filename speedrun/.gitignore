@@ -14,7 +14,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -31,3 +31,39 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Logs ###
+logs/
+*.log
+*.log.*
+
+### OS files ###
+# Windows
+Thumbs.db
+Desktop.ini
+# macOS
+.DS_Store
+# Linux
+*~
+
+### Java ###
+*.class
+
+### Spring Boot ###
+*.jar
+*.war
+
+### Environment variables (añadido) ###
+.env
+.env.*
+*.env
+*.env.local
+*.env.dev
+*.env.test
+*.env.prod
+
+### Temporary files ###
+*.tmp
+*.temp
+*.swp
+*.swo
