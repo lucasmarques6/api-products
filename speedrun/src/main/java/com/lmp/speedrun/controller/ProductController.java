@@ -3,6 +3,8 @@ package com.lmp.speedrun.controller;
 import com.lmp.speedrun.entity.Product;
 import com.lmp.speedrun.service.ProductService;
 import java.util.List;
+import java.util.function.LongFunction;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,6 +42,11 @@ public class ProductController {
   @PutMapping("/products/{id}")
   public Product editProductById(@PathVariable Long id, @RequestBody Product datoToEdit){
     return this.productService.editProductById(id, datoToEdit);
+  }
+
+  @DeleteMapping("/products/{id}")
+  public Product deleteProductById(@PathVariable Long id){
+    return this.productService.deleteProductById(id);
   }
 
 

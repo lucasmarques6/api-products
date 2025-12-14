@@ -5,9 +5,11 @@ import com.lmp.speedrun.repository.ProductRepository;
 import com.lmp.speedrun.utils.StringUtils;
 import java.util.List;
 import java.util.Optional;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class ProductService {
 
   private final ProductRepository productRepository;
@@ -19,7 +21,7 @@ public class ProductService {
   }
 
   public Product createProduct(Product product){
-    System.out.println("Producto ingresado: " + product);
+    log.info("Producto ingresado: {}" + product);
     return this.productRepository.save(product);
   }
 
@@ -87,7 +89,7 @@ public class ProductService {
     // --- Stock ---
     if (dataToEdit.getStock() != null && dataToEdit.getStock() >= 0) {
       System.out.printf(
-          "Editando stock de: %s a -> %s%n",
+          "Editando stock de: %s a  -> %s%n",
           product.getStock(),
           dataToEdit.getStock()
       );
@@ -95,6 +97,14 @@ public class ProductService {
     }
 
     return this.productRepository.save(product);
+  }
+
+  public  Product deleteProductById(Long id){
+    Product product = this.getProductById(id);
+
+    this.productRepository.delete(product);
+
+    return product;
   }
 
 }
