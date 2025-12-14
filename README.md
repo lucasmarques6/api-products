@@ -27,3 +27,14 @@ Diseñada siguiendo buenas prácticas de arquitectura y estándares HTTP.
 
 ---
 
+## 📋 Mejoras pendientes por implementar
+
+### 🛡️ Validaciones y manejo de excepciones
+
+
+
+### 📦 DTOs (Data Transfer Objects)
+
+
+
+
